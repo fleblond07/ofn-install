@@ -116,15 +116,6 @@
       when: ansible_distribution_major_version >= '20'
 
     - meta: flush_handlers # Ensure handlers run successfully before reporting success
-
-    - name: notify slack
-      slack:
-        token: "T02G54U79/BF25P9F7A/DJdtYaLLUpRJPiu72d8NqgGg"
-        msg: '{{ inventory_hostname }} provisioned'
-        channel: "#devops-notifications"
-        username: "ansible executed by {{ lookup('env','USER') }}"
-      when: inventory_hostname not in groups['local']
-
     - name: notify datadog
       uri:
         url: "https://api.datadoghq.com/api/v1/events?api_key={{ datadog_key }}"
