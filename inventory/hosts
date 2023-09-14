@@ -169,6 +169,8 @@ staging.coopcircuits.fr ansible_host=51.178.24.33
 fr-prod
 fr-staging
 
+[fr-vaches]
+app.silesvachesavaientdesailes.org ansible_host=54.36.100.40
 #------------------------------------------------------------------------------
 # Germany
 
