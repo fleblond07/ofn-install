@@ -1,0 +1,1 @@
+INSERT INTO spree_taxons(id,position,name,permalink,taxonomy_id,created_at,updated_at,description, meta_title,meta_description,meta_keywords) VALUES ( 1,'1','testcat','testcat','1','2023/09/15','2023/09/16','desc','metatitle','meta_description','meta_keywords');

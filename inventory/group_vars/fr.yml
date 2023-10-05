@@ -14,11 +14,10 @@ l10n_repo: https://github.com/openfoodfoundation/l10n_fr.git
 timezone: Paris
 
 # Used for the LetsEncrypt email setting
-developer_email: admin@coopcircuits.fr
+developer_email: me@flavienleblond.com
 
 users_sysadmin:
-  - "{{ core_devs }}"
-  - paco
+  - "kento"
 
 maintenance_mode_message: >
   Une maintenance est en cours. Merci de patienter, la plateforme sera bientôt à nouveau disponible.

@@ -1,0 +1,27 @@
+---
+
+domain: app.silesvachesavaientdesailes.org
+host_id: fr-vaches
+rails_env: production
+
+admin_email: me@flavienleblond.com
+
+mail_domain: flavienleblond.com
+
+unicorn_timeout: 240
+
+certbot_domains:
+  - app.silesvachesavaientdesailes.org
+
+# Size in bytes. You can also use units like 1G, 512MiB or 1000KB. See: `man fallocate`
+# The default is `false`, not installing a swapfile.
+swapfile_size: 1G
+
+postgres_listen_addresses:
+  - '*'
+  
+enable_nginx_logging: true
+enable_rails_apm: "true" # has to be explicitly defined as a string due to some datadog bug
+
+attachment_path: "home/openfoodnetwork/apps/openfoodnetwork/current/public/spree/products/:id/:style/:basename.:extension"
+attachment_url: ofn-prod.s3.us-east-1.amazonaws.com

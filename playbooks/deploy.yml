@@ -28,7 +28,7 @@
           Specify a release when deploying by adding (for example) ` -e "git_version=v3.7.0"`
           to the comand. If you still see this message, check for typos :)
           Latest releases here: https://github.com/openfoodfoundation/openfoodnetwork/releases
-      when: rails_env == "production" and git_version == "master"
+      when: rails_env == "production" and git_version == "qsdfqsdf"
 
     - block:
       - include_role:

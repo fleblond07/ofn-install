@@ -159,6 +159,9 @@ es-prod
 #------------------------------------------------------------------------------
 # France
 
+[fr-vaches]
+app.silesvachesavaientdesailes.org ansible_host=54.36.100.40
+
 [fr-prod]
 coopcircuits.fr ansible_host=51.38.38.32
 
@@ -168,9 +171,7 @@ staging.coopcircuits.fr ansible_host=51.178.24.33
 [fr:children]
 fr-prod
 fr-staging
-
-[fr-vaches]
-app.silesvachesavaientdesailes.org ansible_host=54.36.100.40
+fr-vaches
 #------------------------------------------------------------------------------
 # Germany
 
