@@ -160,7 +160,10 @@ es-prod
 # France
 
 [fr-vaches]
-app.silesvachesavaientdesailes.org ansible_host=54.36.100.40
+app.silesvachesavaientdesailes.org ansible_host=54.36.100.40 ansible_user="ubuntu"
+
+[preprod-vaches]
+preprod.silesvachesavaientdesailes.org ansible_host=51.210.241.37 ansible_port=54269 ansible_ssh_private_key_file=~/.ssh/ansible ansible_user="ubuntu"
 
 [fr-prod]
 coopcircuits.fr ansible_host=51.38.38.32
@@ -172,6 +175,8 @@ staging.coopcircuits.fr ansible_host=51.178.24.33
 fr-prod
 fr-staging
 fr-vaches
+preprod-vaches
+
 #------------------------------------------------------------------------------
 # Germany
 

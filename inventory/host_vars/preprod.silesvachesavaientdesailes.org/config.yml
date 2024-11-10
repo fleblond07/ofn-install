@@ -1,17 +1,21 @@
 ---
 
-domain: app.silesvachesavaientdesailes.org
-host_id: fr-vaches
+domain: preprod.silesvachesavaientdesailes.org
+host_id: preprod-vaches
 rails_env: production
 
 admin_email: app@silesvachesavaientdesailes.org
 
 mail_domain: silesvachesavaientdesailes.org
 
+github_name: fleblond07
+
+github_version: preprod
+
 unicorn_timeout: 240
 
 certbot_domains:
-  - app.silesvachesavaientdesailes.org
+  - preprod.silesvachesavaientdesailes.org
 
 # Size in bytes. You can also use units like 1G, 512MiB or 1000KB. See: `man fallocate`
 # The default is `false`, not installing a swapfile.
