@@ -7,6 +7,13 @@
     version: "v{{ nodenv_version }}"
 
 # Plugins automate some tasks
+- name: "Clean existing plugin directories (if any)"
+  file:
+    path: "{{ nodenv_root }}/plugins/{{ item.name }}"
+    state: absent
+  with_items: "{{ nodenv_plugins }}"
+  when: nodenv_plugins | length > 0
+  
 - name: "install nodenv plugins"
   with_items: "{{ nodenv_plugins }}"
   when: nodenv_plugins | length > 0
@@ -14,6 +21,7 @@
     repo: "{{ item.repo }}"
     dest: "{{ nodenv_root }}/plugins/{{ item.name }}"
     version: "{{ item.version }}"
+    force: true
 
 - name: add nodenv to user path
   blockinfile:
